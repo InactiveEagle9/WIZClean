@@ -1,0 +1,129 @@
+:root{
+  --bg:#0b1020;
+  --card:#0f1530;
+  --muted:#9db2cf;
+  --text:#e6eefc;
+  --brand:#4cc9f0;
+  --brand-strong:#22b6e6;
+  --accent:#94f7c5;
+  --ring: color-mix(in oklab, var(--brand) 50%, transparent);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(76,201,240,.12), transparent 60%),
+              radial-gradient(1200px 600px at 90% 0%, rgba(148,247,197,.10), transparent 60%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+img{max-width:100%; display:block}
+.container{max-width:1100px; margin:0 auto; padding:0 16px}
+
+/* Header */
+.site-header{position:sticky; top:0; z-index:20; backdrop-filter:saturate(160%) blur(8px); background:rgba(11,16,32,.55); border-bottom:1px solid rgba(255,255,255,.06)}
+.header-inner{display:flex; align-items:center; justify-content:space-between; height:64px}
+.brand{display:flex; align-items:center; gap:10px; font-weight:800}
+.brand .logo{font-size:22px}
+.brand-name{letter-spacing:.2px}
+.nav{display:flex; align-items:center; gap:18px}
+.nav a{color:var(--text); text-decoration:none; opacity:.85}
+.nav a:hover{opacity:1}
+/* Dropdown (desktop) */
+.nav-item{position:relative}
+.dropdown-toggle{appearance:none; background:transparent; border:1px solid rgba(255,255,255,.12); color:var(--text); border-radius:10px; height:36px; padding:0 12px; font-weight:600}
+.dropdown{position:absolute; top:110%; right:0; min-width:240px; padding:10px; display:flex; flex-direction:column; gap:6px; background:#0D1A2A; border:1px solid rgba(255,255,255,.14); border-radius:12px; box-shadow:0 20px 50px -10px rgba(0,0,0,.5); opacity:0; transform:translateY(-6px) scale(.98); pointer-events:none; transition:.18s ease all}
+.dropdown a{padding:10px 10px; border-radius:8px; text-decoration:none; color:var(--text); opacity:.9}
+.dropdown a:hover{opacity:1; background:rgba(255,255,255,.08)}
+.has-dropdown.open .dropdown{opacity:1; transform:translateY(0) scale(1); pointer-events:auto}
+
+/* Menu toggle (hidden on desktop by default) */
+.menu-toggle{display:none; appearance:none; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:var(--text); height:36px; width:42px; border-radius:10px; align-items:center; justify-content:center}
+.menu-toggle:focus{outline:none; box-shadow:0 0 0 3px var(--ring); border-color:var(--brand)}
+.menu-icon, .menu-icon::before, .menu-icon::after{content:""; display:block; height:2px; width:20px; background:var(--text); border-radius:2px; position:relative; transition:.2s ease all}
+.menu-icon::before{position:absolute; top:-6px}
+.menu-icon::after{position:absolute; top:6px}
+
+/* Buttons */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600; border:1px solid rgba(255,255,255,.12); transition:.2s ease all}
+.btn-ghost{background:transparent; color:var(--text)}
+.btn-ghost:hover{background:rgba(255,255,255,.06)}
+.btn-primary{background:linear-gradient(180deg, var(--brand), var(--brand-strong)); color:#041221; border-color:transparent; box-shadow:0 8px 30px -6px var(--ring)}
+.btn-primary:hover{transform:translateY(-1px); box-shadow:0 12px 36px -6px var(--ring)}
+.btn.full{width:100%}
+
+/* Hero */
+.hero{padding:72px 0 32px; background:radial-gradient(800px 400px at 50% -10%, rgba(76,201,240,.15), transparent 60%)}
+.hero-inner{display:grid; gap:28px; align-items:center}
+.hero h1{font-size: clamp(28px, 6vw, 44px); line-height:1.1; margin:0 0 12px}
+.hero p{font-size: clamp(16px, 2.8vw, 18px); color:var(--muted); margin:0 0 18px}
+.cta{display:flex; gap:12px; flex-wrap:wrap}
+
+/* Sections */
+.section{padding:56px 0}
+.section.alt{background:linear-gradient(180deg, rgba(255,255,255,.03), transparent)}
+.section h2{font-size:26px; margin:0 0 20px}
+
+/* Cards & grid */
+.grid{display:grid; gap:16px}
+.cards{grid-template-columns:repeat(auto-fit, minmax(240px, 1fr))}
+.card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:18px}
+.card h3{margin:0 0 8px; font-size:18px}
+.card p{margin:0; color:var(--muted)}
+
+/* About */
+.about{display:grid; gap:16px}
+.ticks{margin:12px 0 0; padding-left:18px}
+.ticks li{margin:6px 0; color:var(--muted)}
+
+/* Contact */
+.contact-grid{grid-template-columns:repeat(auto-fit, minmax(280px, 1fr))}
+.form .field{display:flex; flex-direction:column; gap:6px; margin-bottom:12px}
+label{font-weight:600}
+input, select, textarea{background:#0a0f21; color:var(--text); border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:10px 12px; outline:none}
+input:focus, select:focus, textarea:focus{border-color:var(--brand); box-shadow:0 0 0 3px var(--ring)}
+.fineprint{color:var(--muted); font-size:12px}
+.contact-list{list-style:none; padding:0; margin:0}
+.contact-list li{margin:8px 0; color:var(--muted)}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(255,255,255,.06); padding:18px 0; background:rgba(11,16,32,.65)}
+.footer-inner{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
+.legal{display:flex; gap:14px; color:var(--muted); font-size:13px}
+
+@media (min-width:900px){
+  .hero{padding:96px 0 48px}
+}
+
+/* Mobile navigation */
+@media (max-width: 820px){
+  .menu-toggle{display:inline-flex}
+  /* Collapse nav into a panel */
+  .nav{position:fixed; top:64px; left:0; right:0; bottom:0; display:flex; flex-direction:column; gap:12px; padding:16px; background:rgba(11,16,32,.96); border-top:1px solid rgba(255,255,255,.10);
+    opacity:0; transform:translateY(-6px); pointer-events:none; transition:.18s ease all; overscroll-behavior:contain}
+  .nav a{padding:12px 10px}
+  /* Hide the CTA button in the hamburger menu */
+  .nav .btn{display:none}
+  /* Open state */
+  .nav.open{opacity:1; transform:translateY(0) scale(1); pointer-events:auto}
+  /* Turn hamburger into X when expanded */
+  .menu-toggle[aria-expanded="true"] .menu-icon{background:transparent}
+  .menu-toggle[aria-expanded="true"] .menu-icon::before{transform:translateY(6px) rotate(45deg)}
+  .menu-toggle[aria-expanded="true"] .menu-icon::after{transform:translateY(-6px) rotate(-45deg)}
+
+  /* Hide site content and lock scroll when menu is open */
+  body.menu-open{overflow:hidden}
+  body.menu-open main,
+  body.menu-open footer{display:none}
+
+  /* Uniform background while menu is open */
+  body.menu-open{background:#0D1A2A !important; background-image:none !important}
+  body.menu-open .site-header{background:#0D1A2A !important; border-bottom:1px solid rgba(255,255,255,.12)}
+  /* Make the overlay match the same solid color */
+  .nav{background:#0D1A2A}
+  /* Mobile dropdown becomes inline list */
+  .dropdown-toggle{width:100%; text-align:left}
+  .dropdown{position:static; min-width:auto; padding:6px 2px; background:transparent; border:0; border-radius:0; box-shadow:none; -webkit-backdrop-filter:none; backdrop-filter:none; opacity:1; transform:none; pointer-events:auto; display:none}
+  .has-dropdown.open .dropdown{display:flex}
+}
