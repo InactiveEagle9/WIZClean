@@ -30,6 +30,8 @@ img{max-width:100%; display:block}
 .nav{display:flex; align-items:center; gap:18px}
 .nav a{color:var(--text); text-decoration:none; opacity:.85}
 .nav a:hover{opacity:1}
+/* Call-now button is mobile-only by default */
+.call-now{display:none}
 /* Dropdown (desktop) */
 .nav-item{position:relative}
 .dropdown-toggle{appearance:none; background:transparent; border:1px solid rgba(255,255,255,.12); color:var(--text); border-radius:10px; height:36px; padding:0 12px; font-weight:600}
@@ -71,11 +73,27 @@ img{max-width:100%; display:block}
 .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:18px}
 .card h3{margin:0 0 8px; font-size:18px}
 .card p{margin:0; color:var(--muted)}
+/* Clickable card link */
+.card-link{display:block; color:inherit; text-decoration:none}
+.card-link #service-regular,
+.card-link #service-deep,
+.card-link #service-lease,
+.card-link #service-office{transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease}
+.card-link:hover #service-regular,
+.card-link:hover #service-deep,
+.card-link:hover #service-lease,
+.card-link:hover #service-office{transform:translateY(-3px); box-shadow:0 14px 30px -12px rgba(0,0,0,.5); background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04)); border-color:rgba(255,255,255,.14)}
+.card-link:focus-visible #service-regular{outline:2px solid var(--brand); outline-offset:3px}
 
 /* About */
 .about{display:grid; gap:16px}
 .ticks{margin:12px 0 0; padding-left:18px}
 .ticks li{margin:6px 0; color:var(--muted)}
+
+/* Checklist */
+.checklist{list-style:none; padding-left:0; margin:8px 0 0}
+.checklist li{position:relative; padding-left:26px; margin:6px 0; color:var(--muted)}
+.checklist li::before{content:"✓"; position:absolute; left:0; top:0; color:var(--accent); font-weight:800}
 
 /* Contact */
 .contact-grid{grid-template-columns:repeat(auto-fit, minmax(280px, 1fr))}
@@ -92,6 +110,20 @@ input:focus, select:focus, textarea:focus{border-color:var(--brand); box-shadow:
 .footer-inner{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
 .legal{display:flex; gap:14px; color:var(--muted); font-size:13px}
 
+/* Explicitly hide call-now on desktop */
+@media (min-width: 821px){
+  .call-now{display:none !important}
+}
+
+/* Map embed */
+.map-embed{position:relative; width:100%; border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,.08); background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02))}
+.map-embed::before{content:""; display:block; padding-top:56%} /* 16:9 ratio */
+.map-frame{position:absolute; inset:0; width:100%; height:100%; border:0}
+/* Custom map pin overlay */
+.map-pin{position:absolute; left:50%; top:50%; transform:translate(-50%, -75%); display:flex; align-items:center; gap:8px; pointer-events:none}
+.pin-dot{width:14px; height:14px; background:var(--accent); border-radius:50%; box-shadow:0 0 0 3px rgba(148,247,197,.25), 0 8px 14px -6px rgba(0,0,0,.6)}
+.pin-label{background:rgba(0,0,0,.55); color:var(--text); padding:6px 8px; border-radius:8px; border:1px solid rgba(255,255,255,.12); font-weight:600; font-size:13px; backdrop-filter:saturate(140%) blur(4px)}
+
 @media (min-width:900px){
   .hero{padding:96px 0 48px}
 }
@@ -99,6 +131,7 @@ input:focus, select:focus, textarea:focus{border-color:var(--brand); box-shadow:
 /* Mobile navigation */
 @media (max-width: 820px){
   .menu-toggle{display:inline-flex}
+  .call-now{display:inline-flex; white-space:nowrap; padding:8px 12px; height:36px}
   /* Collapse nav into a panel */
   .nav{position:fixed; top:64px; left:0; right:0; bottom:0; display:flex; flex-direction:column; gap:12px; padding:16px; background:rgba(11,16,32,.96); border-top:1px solid rgba(255,255,255,.10);
     opacity:0; transform:translateY(-6px); pointer-events:none; transition:.18s ease all; overscroll-behavior:contain}
@@ -126,4 +159,20 @@ input:focus, select:focus, textarea:focus{border-color:var(--brand); box-shadow:
   .dropdown-toggle{width:100%; text-align:left}
   .dropdown{position:static; min-width:auto; padding:6px 2px; background:transparent; border:0; border-radius:0; box-shadow:none; -webkit-backdrop-filter:none; backdrop-filter:none; opacity:1; transform:none; pointer-events:auto; display:none}
   .has-dropdown.open .dropdown{display:flex}
+  /* Hide the parent label when services list is visible */
+  .has-dropdown.open > .dropdown-toggle{display:none}
+  /* Hide other nav links while Services list is open */
+  .nav .has-dropdown.open ~ a[href="areas.html"],
+  .nav .has-dropdown.open ~ a[href="faqs.html"],
+  .nav .has-dropdown.open ~ a[href="terms.html"]{display:none}
+
+  /* Center text on mobile */
+  .hero-text{ text-align:center }
+  .cta{ justify-content:center }
+  .section h2{ text-align:center }
+  .section > .container > p,
+  .contact > p{ text-align:center }
+
+  /* Hide hero call-now beside primary CTA on mobile */
+  .hero .cta a[href^="tel:"]{ display:none }
 }

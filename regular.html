@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Regular Home Cleaning — WIZClean</title>
+  <meta name="description" content="Regular home cleaning by WIZClean: dependable weekly, fortnightly, or monthly cleans with consistent, spotless results." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" style="text-decoration:none; color:inherit">
+        <span class="logo">✨</span>
+        <span class="brand-name">WIZClean</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+        <span class="menu-icon"></span>
+      </button>
+      <nav class="nav" id="primary-nav">
+        <div class="nav-item has-dropdown">
+          <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Services</button>
+          <div class="dropdown" role="menu">
+            <a href="regular.html" role="menuitem">Regular Home Cleaning</a>
+            <a href="index.html#service-deep" role="menuitem">Deep Cleaning</a>
+            <a href="index.html#service-lease" role="menuitem">End of Lease</a>
+            <a href="index.html#service-office" role="menuitem">Office & Retail</a>
+          </div>
+        </div>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact" class="btn btn-primary">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Regular Home Cleaning</h1>
+          <p>Set-and-forget weekly, fortnightly, or monthly cleans. Reliable, consistent, and tailored to your home.</p>
+          <div class="cta">
+            <a href="index.html#contact" class="btn btn-primary">Book a Free Quote</a>
+            <a href="index.html#service-regular" class="btn btn-ghost">Back to Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>What's Included</h2>
+        <div class="grid cards">
+          <article class="card">
+            <h3>Kitchen</h3>
+            <ul class="checklist">
+              <li>Dusting</li>
+              <li>Cobwebs</li>
+              <li>Benchtops</li>
+              <li>Stovetop</li>
+              <li>Sinks & Taps</li>
+              <li>Splashbacks</li>
+              <li>Bins emptied</li>
+              <li>Floor vacuum & mop</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Bathrooms</h3>
+            <ul class="checklist">
+              <li>Dusting</li>
+              <li>Cobwebs</li>
+              <li>Shower & Bath</li>
+              <li>Toilet</li>
+              <li>Basins & Taps</li>
+              <li>Mirrors</li>
+              <li>Benchtops</li>
+              <li>Bins emptied</li>
+              <li>Floor vacuum & mop</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Bedrooms & Living</h3>
+            <ul class="checklist">
+              <li>Dusting</li>
+              <li>Cobwebs</li>
+              <li>Tidy surfaces</li>
+              <li>Mirrors</li>
+              <li>Floor vacuum & mop</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Extras (on request)</h3>
+            <ul class="checklist">
+              <li>Inside oven</li>
+              <li>Inside fridge</li>
+              <li>Internal windows</li>
+              <li>Wall spot clean</li>
+              <li>Detailed skirting & doors</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>Why Choose WIZClean</h2>
+        <ul class="ticks">
+          <li>Police-checked and insured</li>
+          <li>Working with children card</li>
+          <li>Same cleaner where possible for consistency</li>
+          <li>Eco-friendly products available</li>
+          <li>Clear, upfront pricing</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>FAQs</h2>
+        <div class="grid cards">
+          <article class="card">
+            <h3>How often should I book?</h3>
+            <p>Most homes run best on a weekly or fortnightly schedule. Monthly works well for lighter-traffic homes.</p>
+          </article>
+          <article class="card">
+            <h3>Do I need to be home?</h3>
+            <p>No. Many clients provide access instructions. Your home is always locked when I leave.</p>
+          </article>
+          <article class="card">
+            <h3>Do you bring products and equipment?</h3>
+            <p>Yes—everything needed is supplied. If you prefer specific products, I’m happy to use them.</p>
+          </article>
+        </div>
+        <div class="cta" style="margin-top:16px">
+          <a href="index.html#contact" class="btn btn-primary">Get a Quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand">
+        <span class="logo">✨</span>
+        <span class="brand-name">WIZClean</span>
+      </div>
+      <div class="legal">
+        <span>ABN: 00 000 000 000</span>
+        <span>© <span id="y"></span> WIZClean. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const menuBtn = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('primary-nav');
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+    if (menuBtn && nav) {
+      menuBtn.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.classList.toggle('menu-open', open);
+        if (!open) closeAllDropdowns();
+      });
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+        closeAllDropdowns();
+      }));
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          nav.classList.remove('open');
+          menuBtn.setAttribute('aria-expanded', 'false');
+          document.body.classList.remove('menu-open');
+          closeAllDropdowns();
+        }
+      });
+    }
+
+    function closeAllDropdowns(){
+      document.querySelectorAll('.has-dropdown').forEach(d => {
+        d.classList.remove('open');
+        const btn = d.querySelector('.dropdown-toggle');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+    dropdownToggles.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = btn.closest('.has-dropdown');
+        const willOpen = !parent.classList.contains('open');
+        closeAllDropdowns();
+        if (willOpen) {
+          parent.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+    document.addEventListener('click', (e) => {
+      const within = e.target.closest('.has-dropdown');
+      if (!within) closeAllDropdowns();
+    });
+  </script>
+</body>
+</html>

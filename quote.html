@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WIZClean — Residential & Commercial Cleaning</title>
-  <meta name="description" content="WIZClean provides reliable residential and commercial cleaning. Friendly, affordable, and thorough. Book a clean today." />
+  <title>Get a Free Quote — WIZClean</title>
+  <meta name="description" content="Request a free cleaning quote from WIZClean. Fast response and clear pricing for home, end of lease, or office cleans." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -44,84 +44,14 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <h1>Spotless results. Satisfaction guaranteed.</h1>
-          <p>Professional cleaning for homes and small businesses. Flexible scheduling, insured, and satisfaction guaranteed.</p>
-          <div class="cta">
-            <a href="#contact" class="btn btn-primary">Book a Free Quote</a>
-            <a href="tel:+61423011078" class="btn btn-ghost">Call now on 0423 011 078</a>
-          </div>
+          <h1>Get a Free Quote</h1>
+          <p>Tell us about your place and what you’d like done. We’ll reply quickly with pricing and availability.</p>
         </div>
       </div>
     </section>
 
-    <section id="services" class="section">
+    <section class="section">
       <div class="container">
-        <h2>Services</h2>
-        <div class="grid cards">
-          <a class="card-link" href="regular.html">
-            <article class="card" id="service-regular">
-              <h3>Regular Home Cleaning</h3>
-              <p>Weekly, fortnightly, or monthly cleans. Kitchens, bathrooms, dusting, vacuuming, and mopping.</p>
-            </article>
-          </a>
-          <a class="card-link" href="deep.html">
-            <article class="card" id="service-deep">
-              <h3>Deep Cleaning</h3>
-              <p>Top-to-bottom refresh for spring cleaning or special occasions. Extra attention to detail throughout.</p>
-            </article>
-          </a>
-          <a class="card-link" href="end.html">
-            <article class="card" id="service-lease">
-              <h3>End of Lease</h3>
-              <p>Bond-ready cleans to help you move out with confidence. Checklist-based and thorough.</p>
-            </article>
-          </a>
-          <a class="card-link" href="office.html">
-            <article class="card" id="service-office">
-              <h3>Office & Retail</h3>
-              <p>Reliable commercial cleaning for small offices and shops. After-hours available.</p>
-            </article>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section alt">
-      <div class="container about">
-        <div>
-          <h2>About WIZClean</h2>
-          <p>WIZClean is a small, locally owned cleaning service focused on quality and trust. We bring a friendly approach, attention to detail, and clear communication—so you always know what to expect.</p>
-          <ul class="ticks">
-            <li>Police-checked and insured</li>
-            <li>Working with children card</li>
-            <li>Eco-friendly products available</li>
-            <li>Flexible scheduling</li>
-            <li>No surprise fees</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="areas" class="section">
-      <div class="container">
-        <h2>Areas we cover</h2>
-        <div class="map-embed">
-          <iframe class="map-frame" title="Service Area Map" loading="lazy" allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://maps.google.com/maps?f=q&source=s_q&hl=en&q=Station%20Street%2C%20Epsom%20VIC&z=15&iwloc=A&output=embed"></iframe>
-        </div>
-        <div class="cta" style="margin-top:12px">
-          <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Station%20Street%2C%20Epsom%20VIC">Open in Google Maps</a>
-        </div>
-        <p class="fineprint">WIZClean located in Epsom, VIC. Servicing Bendigo and nearby suburbs.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container contact">
-        <h2>Get a Free Quote</h2>
-        <p>Tell us a little bit about your place and what you would like done. Please tell us as much detail as possible so your quote can be as accurate as possible. We'll reply quickly and efficiently.</p>
-        <p>All quotes will be accompanied by a home visit prior to final quote.</p>
         <div class="grid contact-grid">
           <form class="card form" action="mailto:you@wizclean.com.au" method="POST" enctype="text/plain">
             <div class="field">
@@ -137,29 +67,32 @@
               <input id="phone" name="Phone" type="tel" placeholder="04xx xxx xxx" />
             </div>
             <div class="field">
+              <label for="suburb">Suburb</label>
+              <input id="suburb" name="Suburb" type="text" placeholder="e.g., Epsom" />
+            </div>
+            <div class="field">
               <label for="service">Service</label>
               <select id="service" name="Service">
-                <option>Regular Home Cleaning</option>
+                <option selected>Regular Home Cleaning</option>
                 <option>Deep Cleaning</option>
                 <option>End of Lease</option>
                 <option>Office & Retail</option>
               </select>
             </div>
             <div class="field">
-              <label for="message">Details</label>
-              <textarea id="message" name="Details" rows="4" placeholder="Bedrooms, bathrooms, preferred days, any notes..."></textarea>
+              <label for="details">Details</label>
+              <textarea id="details" name="Details" rows="6" placeholder="Please provide as much details as possible"></textarea>
             </div>
             <button type="submit" class="btn btn-primary full">Send Request</button>
-            <p class="fineprint">Prefer to chat? Email <a href="mailto:you@wizclean.com.au">you@wizclean.com.au</a> or call <a href="tel:+61123456789">(02) 1234 6789</a>.</p>
+            <p class="fineprint">Prefer to chat? Email <a href="mailto:you@wizclean.com.au">you@wizclean.com.au</a> or call <a href="tel:+61423011078">0423 011 078</a>.</p>
           </form>
-
           <div class="card contact-info">
-            <h3>Contact</h3>
+            <h3>Helpful info</h3>
             <ul class="contact-list">
-              <li><strong>Phone:</strong> <a href="tel:+61123456789">(02) 1234 6789</a></li>
-              <li><strong>Email:</strong> <a href="mailto:you@wizclean.com.au">you@wizclean.com.au</a></li>
-              <li><strong>Hours:</strong> Mon–Sat, 8am–6pm</li>
-              <li><strong>Service area:</strong> Your City & nearby suburbs</li>
+              <li>Service area: Epsom, Bendigo and nearby suburbs</li>
+              <li>Hours: Mon–Sat, 8am–6pm</li>
+              <li>Eco products available on request</li>
+              <li>Police-checked and insured</li>
             </ul>
           </div>
         </div>
@@ -193,14 +126,12 @@
         document.body.classList.toggle('menu-open', open);
         if (!open) closeAllDropdowns();
       });
-      // Close menu when a link is clicked (mobile UX)
       nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
         nav.classList.remove('open');
         menuBtn.setAttribute('aria-expanded', 'false');
         document.body.classList.remove('menu-open');
         closeAllDropdowns();
       }));
-      // Escape key to close
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
           nav.classList.remove('open');
@@ -211,7 +142,6 @@
       });
     }
 
-    // Dropdown behavior
     function closeAllDropdowns(){
       document.querySelectorAll('.has-dropdown').forEach(d => {
         d.classList.remove('open');
@@ -231,7 +161,6 @@
         }
       });
     });
-    // Close dropdowns on outside click
     document.addEventListener('click', (e) => {
       const within = e.target.closest('.has-dropdown');
       if (!within) closeAllDropdowns();
